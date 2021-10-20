@@ -11,7 +11,7 @@ export default {
       listData: [],
       payment: {
         amount: 6,
-        account: +new Date(), // something that unique like transaction_id|invioce_id|ticket_id
+        account: +new Date() + "", // something that unique like transaction_id|invioce_id|ticket_id
       },
     };
   },
