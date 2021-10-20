@@ -10,9 +10,8 @@ export default {
     return {
       listData: [],
       payment: {
-        vendorId: 175,
         amount: 6,
-        account: "",
+        account: +new Date(), // something that unique like transaction_id|invioce_id|ticket_id
       },
     };
   },
