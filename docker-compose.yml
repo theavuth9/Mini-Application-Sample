@@ -1,0 +1,11 @@
+version: "3"
+services:
+  mini-app:
+    build: .
+    container_name: mini-app
+    restart: always
+    ports:
+      - "8090:80"
+    command: ["nginx", "-g", "daemon off;"]
+    # volumes:
+    #   - .env:/var/www/app/.env

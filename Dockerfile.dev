@@ -1,0 +1,17 @@
+FROM nexus-uat.ababank.com:8082/aba/mini-app/web-frontend/mini-app-base
+    
+ARG SOURCE_PATH=/var/www/app
+
+WORKDIR $SOURCE_PATH
+
+ADD aba.crt /usr/local/share/ca-certificates/
+
+RUN update-ca-certificates
+
+COPY . $SOURCE_PATH
+
+RUN yarn build
+
+COPY ./nginx/default.conf /etc/nginx/sites-available/default
+
+RUN service nginx restart
