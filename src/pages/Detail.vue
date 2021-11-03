@@ -10,7 +10,8 @@ export default {
     return {
       listData: [],
       payment: {
-        amount: 6,
+        amount: "6",
+        currency: "USD",
         account: +new Date() + "", // something that unique like transaction_id|invioce_id|ticket_id
       },
     };

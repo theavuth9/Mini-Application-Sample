@@ -12,6 +12,7 @@ export default {
       payment: {
         amount: "",
         account: "",
+        currency: "USD",
       },
       doPayment: "",
       loading: false,
