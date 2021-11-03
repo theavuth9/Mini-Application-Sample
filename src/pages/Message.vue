@@ -32,6 +32,16 @@ export default {
   },
   mounted() {
     this.status = this.$route.query.message;
+
+    // listen back button browser click
+    window.onpopstate = () => {
+      let firstHistory = window.history.length - 2; // -2 = click-back(1) & first-route(1)
+      this.$router.go(-firstHistory); // redirect to first route
+    };
+  },
+  unmounted() {
+    // clear
+    window.onpopstate = () => {};
   },
 };
 </script>
