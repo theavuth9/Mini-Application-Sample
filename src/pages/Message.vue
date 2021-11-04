@@ -40,8 +40,7 @@ export default {
     };
   },
   unmounted() {
-    // clear
-    window.onpopstate = () => {};
+    // window.onpopstate = () => {};
   },
 };
 </script>
