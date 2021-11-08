@@ -35,18 +35,15 @@ export default {
 
     // listen back button browser click
     window.onpopstate = () => {
-      let firstHistory = window.history.length - 2; // -2 = click-back(1) & first-route(1)
-      this.$router.go(-firstHistory); // redirect to first route
+      this.$bridge.callHandler("backToHomePage");
+      // window.onpopstate = () => {};
     };
-  },
-  unmounted() {
-    // window.onpopstate = () => {};
   },
 };
 </script>
 <template>
   <div class="message" style="margin-bottom: 60px">
-    <img :src="require(`../static/${label[status].img}`)" class="img" />
+    <img :src="require(`@/static/${label[status].img}`)" class="img" />
     <h3>{{ label[status].message }}</h3>
     <van-button type="success" @click="clickBack" class="btn-done" block
       >Done</van-button

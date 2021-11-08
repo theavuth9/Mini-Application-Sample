@@ -33,9 +33,6 @@ export default {
     },
   },
   mounted() {
-    this.$bridge.registerHandler("doBackAction", () => {
-      this.$router.go(-1);
-    });
     this.$bridge.registerHandler("closeApp", () => {
       // callback({ status: true });
       this.handleCloseApp();
@@ -43,7 +40,6 @@ export default {
   },
   methods: {
     handleChange(val) {
-      console.log("handleChange", val);
       setTimeout(() => {
         this.active = val;
       }, 100);
