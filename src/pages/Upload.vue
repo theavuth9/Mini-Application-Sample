@@ -50,7 +50,7 @@ export default {
       </van-button>
       <van-uploader v-model="file" />
       <div v-if="file.length">
-        <img :src="`${getFile}`" class="img" />
+        <img :src="`data:image/jpeg;base64, ${getFile}`" class="img" />
       </div>
     </div>
   </div>
