@@ -10,13 +10,12 @@ export default {
   },
   data() {
     return {
-      file: [],
+      file: {},
     };
   },
   computed: {
     getFile() {
-      console.log(_.get(this.file, "[0]"));
-      return _.get(this.file, "[0].content");
+      return _.get(this.file, "content");
     },
   },
   created() {
@@ -33,9 +32,9 @@ export default {
     this.$bridge.registerHandler("getFileUpload", (data) => {
       if (typeof data === "string") {
         let msgString = JSON.parse(data);
-        this.file = msgString.content;
+        this.file = msgString;
       } else {
-        this.file = data.content;
+        this.file = data;
       }
     });
   },
@@ -48,10 +47,13 @@ export default {
       <van-button type="primary" @click="onUpload" block>
         Uplaod File
       </van-button>
-      <van-uploader v-model="file" />
-      <div v-if="file.length">
-        <img :src="`data:image/jpeg;base64, ${getFile}`" class="img" />
+      <!-- <van-uploader v-model="file" /> -->
+      <div v-if="file.content">
+        <img :src="`data:image/jpeg;base64, ${file.content}`" class="img" />
       </div>
+      <pre>
+        {{ file }}
+      </pre>
     </div>
   </div>
 </template>
