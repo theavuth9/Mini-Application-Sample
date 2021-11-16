@@ -4,6 +4,7 @@ import Profile from "@/pages/Profile.vue";
 import Payment from "@/pages/Payment.vue";
 import Detail from "@/pages/Detail.vue";
 import Message from "@/pages/Message.vue";
+import Upload from "@/pages/Upload.vue";
 import NotFound from "@/pages/NotFound.vue";
 
 const routes = [
@@ -26,6 +27,11 @@ const routes = [
     path: "/details",
     name: "Detail",
     component: Detail,
+  },
+  {
+    path: "/upload",
+    name: "Upload",
+    component: Upload,
   },
   {
     path: "/message",

@@ -73,6 +73,7 @@ export default {
           <img :src="props.active ? icon.active : icon.inactive" />
         </template>
       </van-tabbar-item>
+      <van-tabbar-item to="/upload" icon="idcard">Upload</van-tabbar-item>
       <!-- <van-tabbar-item to="/payment" icon="idcard">Payment</van-tabbar-item> -->
     </van-tabbar>
     <!-- <AppFooter /> -->
