@@ -3281,6 +3281,11 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.18.tgz#980a8b53085f34af313410af064f2bd241784218"
   integrity sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==
 
+custom-bridge-native@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/custom-bridge-native/-/custom-bridge-native-1.0.0.tgz#44f08c0cd1fa0fde67dff07078287acab3a8e98b"
+  integrity sha512-VgZzGzUZxIMhwXbbhUO+1/NEGcuCRTsi9FVXNp+dqxjFpQxRmR2ImxoEAjuPSSH3HBP+5sPn/hpaqIfWkLsTAA==
+
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
@@ -9088,11 +9093,6 @@ vue-axios@^3.2.4:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.3.7.tgz#1958b6fb712eb4011ab21db433b2350e2a6d684f"
   integrity sha512-SmNFJIkM5YF4eWfaWfmCmORy52ZP5b8ml9PCTi7C0VsuQK4vwZON6ToNWuyFGCL6U/Fp/pzfIgdLLh/O/qKzYQ==
-
-vue-bridge-native@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vue-bridge-native/-/vue-bridge-native-1.0.0.tgz#89e99efb7511aff160d7fa10d31be7b49194e162"
-  integrity sha512-pGe5IJoE07jqU8cGZL//9vPpJN24tE6F9SbrDSm1tjNetJKSsBwPgygOmSRZL8hv1pEApdF+N7cW9Kqh8Bb5EQ==
 
 vue-eslint-parser@^7.10.0:
   version "7.11.0"

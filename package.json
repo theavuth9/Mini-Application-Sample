@@ -15,7 +15,7 @@
     "vant": "^3.1.4",
     "vue": "^3.0.0",
     "vue-axios": "^3.2.4",
-    "vue-bridge-native": "^1.0.0",
+    "custom-bridge-native": "^1.0.0",
     "vue-router": "^4.0.10",
     "vue-template-compiler": "^2.6.14",
     "vue-webview-js-bridge": "https://github.com/ABA-Bank/vue-bridge-v3.git",
