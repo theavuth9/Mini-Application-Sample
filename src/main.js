@@ -9,7 +9,8 @@ import "./plugins/global-config";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-import VueJsBridge from "vue-webview-js-bridge";
+import VueJsBridge from "vue-bridge-native";
+// import VueJsBridge from "vue-webview-js-bridge";
 
 const app = createApp(AppLayout);
 app.config.devtools = true;

@@ -9089,6 +9089,11 @@ vue-axios@^3.2.4:
   resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.3.7.tgz#1958b6fb712eb4011ab21db433b2350e2a6d684f"
   integrity sha512-SmNFJIkM5YF4eWfaWfmCmORy52ZP5b8ml9PCTi7C0VsuQK4vwZON6ToNWuyFGCL6U/Fp/pzfIgdLLh/O/qKzYQ==
 
+vue-bridge-native@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-bridge-native/-/vue-bridge-native-1.0.0.tgz#89e99efb7511aff160d7fa10d31be7b49194e162"
+  integrity sha512-pGe5IJoE07jqU8cGZL//9vPpJN24tE6F9SbrDSm1tjNetJKSsBwPgygOmSRZL8hv1pEApdF+N7cW9Kqh8Bb5EQ==
+
 vue-eslint-parser@^7.10.0:
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.11.0.tgz#214b5dea961007fcffb2ee65b8912307628d0daf"
