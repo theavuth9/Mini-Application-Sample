@@ -1,8 +1,9 @@
 <script>
-import { Field } from "vant";
+import { Field, CellGroup } from "vant";
 export default {
   components: {
     [Field.name]: Field,
+    [CellGroup.name]: CellGroup,
   },
   data() {
     return {
