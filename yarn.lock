@@ -1516,6 +1516,13 @@
   optionalDependencies:
     prettier "^1.18.2 || ^2.0.0"
 
+"@vue/composition-api@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.4.3.tgz#c80eb8c692e16ebfcdab4af5344a6e3ff8ccc38e"
+  integrity sha512-Qp4rMbESO05/7/Imck027X5lPhbmMX/mtYSDvIMJ14PS4KHY/4GllnQbPEfsBEe1LECFE6HWx2k7HYgcuYNvpg==
+  dependencies:
+    tslib "^2.3.1"
+
 "@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.18":
   version "6.0.0-beta.19"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.19.tgz#f8e88059daa424515992426a0c7ea5cde07e99bf"
@@ -3281,10 +3288,13 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.18.tgz#980a8b53085f34af313410af064f2bd241784218"
   integrity sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==
 
-custom-bridge-native@^1.0.0:
+custom-bridge-js@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/custom-bridge-native/-/custom-bridge-native-1.0.0.tgz#44f08c0cd1fa0fde67dff07078287acab3a8e98b"
-  integrity sha512-VgZzGzUZxIMhwXbbhUO+1/NEGcuCRTsi9FVXNp+dqxjFpQxRmR2ImxoEAjuPSSH3HBP+5sPn/hpaqIfWkLsTAA==
+  resolved "https://registry.yarnpkg.com/custom-bridge-js/-/custom-bridge-js-1.0.0.tgz#3ffd08e942172966a4ac99160c91fa9beb55215f"
+  integrity sha512-gBCiNBh0M+a+fxlnS5hk7MfshqY/kf3T+Rn0vLw/bUj78KeW3vuJjRDVxkRAJQpqYuVUTaQs5r9asxpA2H7Zug==
+  dependencies:
+    "@vue/composition-api" "^1.4.3"
+    vue-demi "^0.12.1"
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -8771,6 +8781,11 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
+tslib@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -9093,6 +9108,11 @@ vue-axios@^3.2.4:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.3.7.tgz#1958b6fb712eb4011ab21db433b2350e2a6d684f"
   integrity sha512-SmNFJIkM5YF4eWfaWfmCmORy52ZP5b8ml9PCTi7C0VsuQK4vwZON6ToNWuyFGCL6U/Fp/pzfIgdLLh/O/qKzYQ==
+
+vue-demi@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
+  integrity sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==
 
 vue-eslint-parser@^7.10.0:
   version "7.11.0"
