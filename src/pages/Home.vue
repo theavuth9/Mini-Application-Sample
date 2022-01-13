@@ -23,7 +23,7 @@ export default {
 </script>
 <template>
   <div class="wrapper" style="margin-bottom: 60px">
-    <h2 style="padding: 16px">Product</h2>
+    <h2 style="padding: 16px">Product 1</h2>
     <div v-if="!listData.length" style="text-align: center">
       <van-loading type="spinner" color="#1989fa" />
     </div>
