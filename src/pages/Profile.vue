@@ -30,6 +30,8 @@ export default {
       console.log("status", typeof data === "string");
       if (typeof data === "string") {
         this.profile = JSON.parse(data);
+        console.log("JSON.parse(data)", JSON.parse(data));
+        console.log("status", typeof data === "string");
       } else {
         this.profile = data;
       }
