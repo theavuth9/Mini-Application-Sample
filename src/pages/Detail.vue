@@ -34,6 +34,7 @@ export default {
   },
   mounted() {
     this.$bridge.registerHandler("getStatus", (data) => {
+      console.log("getStatus", data);
       let msg = "";
       if (typeof data === "string") {
         let msgString = JSON.parse(data);
