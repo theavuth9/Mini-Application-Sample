@@ -15,9 +15,9 @@ export default {
     this.$bridge.callHandler("setBarTitle", { title: "Home Page" });
   },
   mounted() {
-    this.axios.get("https://gorest.co.in/public/v1/posts").then(({ data }) => {
-      this.listData = data.data;
-    });
+    // this.axios.get("https://gorest.co.in/public/v1/posts").then(({ data }) => {
+    //   this.listData = data.data;
+    // });
   },
 };
 </script>
