@@ -30,6 +30,7 @@ export default {
   },
   mounted() {
     this.$bridge.registerHandler("getFileUpload", (data) => {
+      console.log("getFileUpload", data);
       if (typeof data === "string") {
         let msgString = JSON.parse(data);
         this.file = msgString;
