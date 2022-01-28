@@ -25,7 +25,9 @@ export default {
   mounted() {
     // get profile from native app
     this.$bridge.callHandler("getProfile").then((data) => {
-      console.log("response", data);
+      console.log("getProfile", data);
+      console.log("JSON.parse(data)", JSON.parse(data));
+      console.log("status", typeof data === "string");
       if (typeof data === "string") {
         this.profile = JSON.parse(data);
       } else {
