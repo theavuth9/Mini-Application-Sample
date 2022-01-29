@@ -32,22 +32,6 @@ export default {
       this.$bridge.callHandler("doPayment", this.payment).then(() => {});
     },
   },
-  mounted() {
-    this.$bridge.registerHandler("getStatus", (data) => {
-      console.log("Detail", data);
-      let msg = "";
-      if (typeof data === "string") {
-        let msgString = JSON.parse(data);
-        msg = msgString.status;
-      } else {
-        msg = data.status;
-      }
-      this.$router.push({
-        path: "message",
-        query: { message: msg },
-      });
-    });
-  },
 };
 </script>
 <template>

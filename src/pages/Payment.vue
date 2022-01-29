@@ -33,23 +33,6 @@ export default {
     // set bar title
     this.$bridge.callHandler("setBarTitle", { title: "Payment Page" });
   },
-  mounted() {
-    // Listen handler native app
-    this.$bridge.registerHandler("getStatus", (data) => {
-      console.log("payment", data);
-      let msg = "";
-      if (typeof data === "string") {
-        let msgString = JSON.parse(data);
-        msg = msgString.status;
-      } else {
-        msg = data.status;
-      }
-      this.$router.push({
-        path: "message",
-        query: { message: msg },
-      });
-    });
-  },
 };
 </script>
 <template>

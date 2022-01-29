@@ -3288,10 +3288,10 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.18.tgz#980a8b53085f34af313410af064f2bd241784218"
   integrity sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==
 
-custom-bridge-js@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/custom-bridge-js/-/custom-bridge-js-1.0.15.tgz#bd0340e4bfb42d69a97cbe0062421e688fb7df8e"
-  integrity sha512-0oJx0sABjXKdPS2Jxd3UiR+vaTJyH47IfPQwejkne9WaxxvctwAVucmmseRwpUG0ozWzaVFmFu5V0B7wgnk6Sw==
+custom-bridge-js@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/custom-bridge-js/-/custom-bridge-js-1.0.16.tgz#ddf5e4f3b68cd178a4a59f065f8d3cd9c28ce17e"
+  integrity sha512-XsbcYK91GQE0wsNvRncYot6khYp0tW3pcb/X3nrOPJ5liBLzwQfj5ZAk8eKk7N1UamYYeEaZmYy3e/gy49Su9A==
   dependencies:
     "@vue/composition-api" "^1.4.3"
     vue-demi "^0.12.1"
