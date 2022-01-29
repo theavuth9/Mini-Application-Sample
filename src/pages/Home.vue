@@ -18,21 +18,6 @@ export default {
     this.axios.get("https://gorest.co.in/public/v1/posts").then(({ data }) => {
       this.listData = data.data;
     });
-
-    this.$bridge.registerHandler("getStatus", (data) => {
-      console.log("getStatus", data);
-      let msg = "";
-      if (typeof data === "string") {
-        let msgString = JSON.parse(data);
-        msg = msgString.status;
-      } else {
-        msg = data.status;
-      }
-      this.$router.push({
-        path: "message",
-        query: { message: msg },
-      });
-    });
   },
 };
 </script>

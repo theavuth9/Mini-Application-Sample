@@ -36,6 +36,7 @@ export default {
   mounted() {
     // Listen handler native app
     this.$bridge.registerHandler("getStatus", (data) => {
+      console.log("payment", data);
       let msg = "";
       if (typeof data === "string") {
         let msgString = JSON.parse(data);
