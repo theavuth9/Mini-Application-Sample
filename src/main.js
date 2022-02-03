@@ -8,8 +8,8 @@ import camelCase from "lodash/camelCase";
 import "./plugins/global-config";
 import axios from "axios";
 import VueAxios from "vue-axios";
-
-import VueJsBridge from "bridge-gateway";
+import { errorHandler } from "./plugins/interceptor";
+import VueJsBridge, { $fetch } from "bridge-gateway";
 // import VueJsBridge from "vue-webview-js-bridge";
 
 const app = createApp(AppLayout);
@@ -30,6 +30,8 @@ requireComponent.keys().forEach((fileName) => {
   );
   app.component(componentName, componentConfig.default || componentConfig);
 });
+errorHandler($fetch);
+
 app.use(VueJsBridge);
 app.use(VueAxios, axios);
 app.mixin(helper).use(router).use(store).mount("#app");

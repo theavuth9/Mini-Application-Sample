@@ -21,8 +21,8 @@ export default {
           abc: 123456789,
         },
       })
-      .then(({ data }) => {
-        this.listData = data.data;
+      .then((res) => {
+        this.listData = _.get(res, "data.data");
       });
     this.$fetch
       .get("https://jsonplaceholder.typicode.com/todos/1", {
@@ -30,8 +30,8 @@ export default {
           testing: 123456789,
         },
       })
-      .then(({ data }) => {
-        this.listData = data.data;
+      .then((res) => {
+        console.log("res: ", res);
       })
       .catch((error) => {
         console.log("error", error);
