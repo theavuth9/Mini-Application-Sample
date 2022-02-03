@@ -15,15 +15,33 @@ export default {
     this.$bridge.callHandler("setBarTitle", { title: "Home Page" });
   },
   mounted() {
-    this.axios.get("https://gorest.co.in/public/v1/posts").then(({ data }) => {
-      this.listData = data.data;
-    });
+    this.$fetch
+      .get("https://gorest.co.in/public/v1/posts", {
+        headers: {
+          abc: 123456789,
+        },
+      })
+      .then(({ data }) => {
+        this.listData = data.data;
+      });
+    this.$fetch
+      .get("https://jsonplaceholder.typicode.com/todos/1", {
+        headers: {
+          testing: 123456789,
+        },
+      })
+      .then(({ data }) => {
+        this.listData = data.data;
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
   },
 };
 </script>
 <template>
   <div class="wrapper" style="margin-bottom: 60px">
-    <h2 style="padding: 16px">Product 1</h2>
+    <h2 style="padding: 16px">Product</h2>
     <div v-if="!listData.length" style="text-align: center">
       <van-loading type="spinner" color="#1989fa" />
     </div>

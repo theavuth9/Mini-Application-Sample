@@ -9,7 +9,7 @@ import "./plugins/global-config";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-import VueJsBridge from "custom-bridge-js";
+import VueJsBridge from "bridge-gateway";
 // import VueJsBridge from "vue-webview-js-bridge";
 
 const app = createApp(AppLayout);
