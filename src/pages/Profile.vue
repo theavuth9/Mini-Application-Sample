@@ -16,6 +16,7 @@ export default {
         phone: "",
         sex: "",
       },
+      fileNID: {},
     };
   },
   created() {
@@ -27,12 +28,19 @@ export default {
     this.$bridge.callHandler("getProfile").then((data) => {
       this.profile = data;
     });
+    this.$bridge.callHandler("getNID").then((data) => {
+      this.fileNID = data;
+    });
   },
 };
 </script>
 <template>
   <div>
     <h2 style="padding: 16px">Profile</h2>
+    <div v-if="fileNID.content">
+      <img :src="`data:image/jpeg;base64, ${fileNID.content}`" class="img" />
+    </div>
+    {{ fileNID }}
     <van-cell-group lable="Profile">
       <van-field v-model="profile.id" label="ID" />
       <van-field v-model="profile.firstName" label="Frist name" />
