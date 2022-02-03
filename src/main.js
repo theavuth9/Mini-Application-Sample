@@ -8,7 +8,7 @@ import camelCase from "lodash/camelCase";
 import "./plugins/global-config";
 import axios from "axios";
 import VueAxios from "vue-axios";
-import { errorHandler } from "./plugins/interceptor";
+import errorHandler from "./plugins/interceptor";
 import VueJsBridge, { $fetch } from "bridge-gateway";
 // import VueJsBridge from "vue-webview-js-bridge";
 
