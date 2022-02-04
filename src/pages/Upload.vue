@@ -47,7 +47,7 @@ export default {
       <div v-if="file.content">
         <img :src="`data:image/jpeg;base64, ${file.content}`" class="img" />
       </div>
-      <pre>
+      <pre v-if="file.content">
         {{ file }}
       </pre>
     </div>

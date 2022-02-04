@@ -37,10 +37,9 @@ export default {
 <template>
   <div>
     <h2 style="padding: 16px">Profile</h2>
-    <div v-if="fileNID.content">
+    <div v-if="fileNID.content" class="file-nid">
       <img :src="`data:image/jpeg;base64, ${fileNID.content}`" class="img" />
     </div>
-    {{ fileNID }}
     <van-cell-group lable="Profile">
       <van-field v-model="profile.id" label="ID" />
       <van-field v-model="profile.firstName" label="Frist name" />
@@ -52,3 +51,14 @@ export default {
     </van-cell-group>
   </div>
 </template>
+<style>
+.file-nid {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.file-nid img {
+  width: 80%;
+  display: flex;
+}
+</style>
