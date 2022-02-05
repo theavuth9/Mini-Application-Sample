@@ -2332,15 +2332,6 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bridge-gateway@^0.3.9:
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/bridge-gateway/-/bridge-gateway-0.3.9.tgz#0aa47f9dd7cb5c8263e6aeccde0b338a78d77c6f"
-  integrity sha512-GLvV7wrnBJXTDksKiMHJ236n8u11VO6zh8Dzj8oYoYyuKDvcW7Ew9+u2tE00Eg95BSUAcW9Sphw4cNqKff8cOA==
-  dependencies:
-    "@vue/composition-api" "^1.4.3"
-    axios "^0.25.0"
-    vue-demi "^0.12.1"
-
 brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz"
@@ -3301,15 +3292,6 @@ csstype@^2.6.8:
   version "2.6.18"
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.18.tgz"
   integrity sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==
-
-custom-bridge-js@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/custom-bridge-js/-/custom-bridge-js-1.0.19.tgz#8638c378b558d3d7ed64a14953c3589c3264641e"
-  integrity sha512-zIZ1EIA+Vpp6XwtdHAGsIYVThkMFA4FLK6POpaVz4cJ1jMikvdsYZa/YQt5WT7+yUAKoJaxlAt1788fwPi28IA==
-  dependencies:
-    "@vue/composition-api" "^1.4.3"
-    axios "^0.25.0"
-    vue-demi "^0.12.1"
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -9124,6 +9106,15 @@ vue-axios@^3.2.4:
   resolved "https://registry.npmjs.org/vue-axios/-/vue-axios-3.3.7.tgz"
   integrity sha512-SmNFJIkM5YF4eWfaWfmCmORy52ZP5b8ml9PCTi7C0VsuQK4vwZON6ToNWuyFGCL6U/Fp/pzfIgdLLh/O/qKzYQ==
 
+vue-bridge-gateway@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-bridge-gateway/-/vue-bridge-gateway-1.0.0.tgz#2757268905e572fe9f156e29fa4102d3e4ccc793"
+  integrity sha512-8wL/fzXoFyclMMsEEKlhB327NKxxTDvG2jm0A3xSqcqLYyOUPvxWg2H5NtcHAlGQTVbNJmcTV3OnF2MYPIhnAw==
+  dependencies:
+    "@vue/composition-api" "^1.4.3"
+    axios "^0.25.0"
+    vue-demi "^0.12.1"
+
 vue-demi@^0.12.1:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
@@ -9194,10 +9185,6 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
-
-"vue-webview-js-bridge@https://github.com/ABA-Bank/vue-bridge-v3.git":
-  version "0.0.8"
-  resolved "git+ssh://git@github.com/ABA-Bank/vue-bridge-v3.git#ff00c41b003e84015447ca0eb4fd78268a345094"
 
 vue@^3.0.0:
   version "3.2.21"

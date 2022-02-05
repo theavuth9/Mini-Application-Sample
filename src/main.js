@@ -9,8 +9,7 @@ import "./plugins/global-config";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import errorHandler from "./plugins/interceptor";
-import VueJsBridge, { $fetch } from "custom-bridge-js";
-// import VueJsBridge from "vue-webview-js-bridge";
+import VueJsBridge, { $fetch } from "vue-bridge-gateway";
 
 const app = createApp(AppLayout);
 app.config.devtools = true;
