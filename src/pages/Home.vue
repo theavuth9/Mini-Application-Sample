@@ -32,19 +32,19 @@ export default {
     //   .then((response) => response.json())
     //   .then((data) => (this.request = data));
 
-    let req = new XMLHttpRequest();
-    req.open("GET", "https://reqres.in/api/users?page=2");
-    req.send();
-    req.onload = () => {
-      console.log("reqrest", req);
-      if (req.status === 200) {
-        let { data } = JSON.parse(req.response);
-        this.request = data;
-        console.log("onload", data);
-      } else {
-        console.log("error", req.statusText);
-      }
-    };
+    // let req = new XMLHttpRequest();
+    // req.open("GET", "https://reqres.in/api/users?page=2");
+    // req.send();
+    // req.onload = () => {
+    //   console.log("reqrest", req);
+    //   if (req.status === 200) {
+    //     let { data } = JSON.parse(req.response);
+    //     this.request = data;
+    //     console.log("onload", data);
+    //   } else {
+    //     console.log("error", req.statusText);
+    //   }
+    // };
   },
 };
 </script>
