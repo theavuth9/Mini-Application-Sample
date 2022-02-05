@@ -20,32 +20,40 @@ export default {
     this.$fetch.get("https://gorest.co.in/public/v1/posts").then((res) => {
       this.listData = _.get(res, "data.data");
     });
+
     this.$fetch
       .get("https://jsonplaceholder.typicode.com/todos/1")
       .then((res) => {
         console.log("jsonplaceholder: ", res);
         this.json = res;
-      })
-      .catch((error) => {
-        console.log("error", error);
       });
-    this.$fetch
-      .get("https://reqres.in/api/users?page=2")
-      .then((res) => {
-        console.log("res: ", res);
-        this.request = res;
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+
+    // fetch("https://reqres.in/api/users?page=2")
+    //   .then((response) => response.json())
+    //   .then((data) => (this.request = data));
+
+    let req = new XMLHttpRequest();
+    req.open("GET", "https://reqres.in/api/users?page=2");
+    req.send();
+    req.onload = () => {
+      console.log("reqrest", req);
+      if (req.status === 200) {
+        let { data } = JSON.parse(req.response);
+        this.request = data;
+        console.log("onload", data);
+      } else {
+        console.log("error", req.statusText);
+      }
+    };
   },
 };
 </script>
 <template>
   <div class="wrapper" style="margin-bottom: 60px">
     <h2 style="padding: 16px">Product</h2>
-    <p>{{ json }}</p>
-    <p>{{ request }}</p>
+    <pre>{{ json }}</pre>
+    <pre>{{ request }}</pre>
+    <!-- <pre>{{ listData }}</pre> -->
     <div v-if="!listData.length" style="text-align: center">
       <van-loading type="spinner" color="#1989fa" />
     </div>
