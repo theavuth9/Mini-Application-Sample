@@ -51,9 +51,6 @@ export default {
 <template>
   <div class="wrapper" style="margin-bottom: 60px">
     <h2 style="padding: 16px">Product</h2>
-    <pre>{{ json }}</pre>
-    <pre>{{ request }}</pre>
-    <!-- <pre>{{ listData }}</pre> -->
     <div v-if="!listData.length" style="text-align: center">
       <van-loading type="spinner" color="#1989fa" />
     </div>
