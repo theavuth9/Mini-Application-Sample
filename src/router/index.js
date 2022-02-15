@@ -6,6 +6,7 @@ import Detail from "@/pages/Detail.vue";
 import Message from "@/pages/Message.vue";
 import Upload from "@/pages/Upload.vue";
 import NotFound from "@/pages/NotFound.vue";
+import PlayGround from "../pages/PlayGround.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     path: "/message",
     name: "Message",
     component: Message,
+  },
+  {
+    path: "/playground",
+    name: "Playground",
+    component: PlayGround,
   },
   {
     path: "/:catchAll(.*)",

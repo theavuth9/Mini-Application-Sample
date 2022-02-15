@@ -68,6 +68,17 @@ export default {
         />
       </router-link>
     </template>
+
+    <div>
+      <router-link to="/playground">
+        <van-card
+          title="Data Fetching Test"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+          currency="$ "
+          thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+        />
+      </router-link>
+    </div>
   </div>
 </template>
 <style lang="scss">
