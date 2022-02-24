@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, h, provide } from "vue";
 import AppLayout from "./layout/index.vue";
 import router from "./router";
 import store from "./store";
@@ -10,8 +10,22 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import errorHandler from "./plugins/interceptor";
 import VueJsBridge, { $fetch } from "vue-bridge-gateway";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { DefaultApolloClient } from "@vue/apollo-composable";
 
-const app = createApp(AppLayout);
+const defaultClient = new ApolloClient({
+  uri: "https://rickandmortyapi.com/graphql",
+  cache: new InMemoryCache(),
+});
+
+const app = createApp({
+  setup() {
+    provide(DefaultApolloClient, defaultClient);
+  },
+  render() {
+    return h(AppLayout);
+  },
+});
 app.config.devtools = true;
 
 const requireComponent = require.context(

@@ -1,0 +1,9 @@
+query allCharacters {
+  characters {
+    results {
+      name
+      species
+      gender
+    }
+  }
+}

@@ -60,10 +60,42 @@
         <pre>{{ xmlResult }}</pre>
       </div>
     </div>
+    <div class="card">
+      <div class="header">
+        <div class="title">
+          GraphQL
+          <small v-if="get(result, 'characters.results').length"
+            >(reload to clear apollo cache)</small
+          >
+        </div>
+        <div class="button">
+          <button @click="fetchCharacters()">GET</button>
+        </div>
+      </div>
+      <div class="result">
+        <div v-if="loading">Loading...</div>
+        <ul v-else>
+          <li
+            v-for="character in get(result, 'characters.results')"
+            :key="character.id"
+          >
+            <h3>{{ character.name }}</h3>
+            <details>
+              <summary>Show more</summary>
+              <p><b>Specie:</b> {{ character.species }}</p>
+              <p><b>Gender:</b> {{ character.gender }}</p>
+            </details>
+            <hr />
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { useQuery } from "@vue/apollo-composable";
+import allCharactersQuery from "../../graphql/allCharacters.query.gql";
 import { ref } from "vue";
 import axios from "axios";
 import $ from "jquery";
@@ -131,6 +163,21 @@ function clearResult() {
   fetchResult.value = {};
   ajaxResult.value = {};
   xmlResult.value = {};
+  result.value = [];
+  fetchEnabled.value = false;
+}
+
+// graphql
+let fetchEnabled = ref(false);
+const { result, loading } = useQuery(allCharactersQuery, null, {
+  enabled: fetchEnabled,
+});
+const fetchCharacters = () => {
+  fetchEnabled.value = true;
+};
+
+function get(val, string) {
+  return _.get(val, string, []);
 }
 </script>
 
@@ -193,6 +240,10 @@ button {
     margin-top: 8px;
     text-transform: uppercase;
     font-size: 10px;
+  }
+
+  ul {
+    list-style: none;
   }
 }
 </style>
