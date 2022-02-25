@@ -9252,10 +9252,10 @@ vue-axios@^3.2.4:
   resolved "https://registry.npmjs.org/vue-axios/-/vue-axios-3.3.7.tgz"
   integrity sha512-SmNFJIkM5YF4eWfaWfmCmORy52ZP5b8ml9PCTi7C0VsuQK4vwZON6ToNWuyFGCL6U/Fp/pzfIgdLLh/O/qKzYQ==
 
-vue-bridge-gateway@^1.0.0:
-  version "1.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/vue-bridge-gateway/-/vue-bridge-gateway-1.0.0-rc.2.tgz#5a7d6d81b5690960e6f7546cc2396e5b6d3920b2"
-  integrity sha512-4KfeM5SeEwv7wxtVzPGoSmNRFidk0600LA9QCqvqeEWABeMMvgq5rnKv5NQWwa2WuVbcXlvnb5eKzn/yuyVn8Q==
+vue-bridge-gateway@1.0.0-rc.4:
+  version "1.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/vue-bridge-gateway/-/vue-bridge-gateway-1.0.0-rc.4.tgz#1ecd13154b75435a95ec3ba4582856329dc58952"
+  integrity sha512-glTt8624lIxWxsL8BoHERgYP3p0GZ4j1R4Lim8oxnv3T6kAM0SH13wZZHOseVe7Fu/RtLoIk1aILp01uCFtF/w==
   dependencies:
     "@vue/composition-api" "^1.4.3"
     axios "^0.25.0"
